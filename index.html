@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atenção! Oferta Exclusiva — Kim Dojun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --red: #ef445a;
+            --red-dark: #c8243c;
+            --red-light: #fff0f2;
+            --red-border: #ffd0d7;
+            --gold: #c89840;
+            --gold-light: #f9f0de;
+            --text-dark: #1a1a1a;
+            --text-mid: #4a4a4a;
+            --text-muted: #888;
+            --bg: #f7f5f2;
+            --white: #ffffff;
+            --green: #16a34a;
+            --green-light: #f0fdf4;
+            --coral: #E8A0B0;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* ── BARRA ALERTA TOPO ── */
+        .alerta-topo {
+            background: #fef2c0;
+            border-bottom: 2px solid #f5c518;
+            padding: 11px 20px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 700;
+            color: #7a5800;
+            letter-spacing: 0.02em;
+            animation: pulse-bg 2.5s ease-in-out infinite;
+        }
+        @keyframes pulse-bg {
+            0%, 100% { background: #fef2c0; }
+            50% { background: #fde68a; }
+        }
+        .alerta-topo span { color: var(--red); }
+
+        /* ── HEADER ── */
+        .site-header {
+            background: var(--white);
+            border-bottom: 1px solid #ece8e4;
+            padding: 14px 20px;
+            text-align: center;
+        }
+        .site-header .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            letter-spacing: 0.03em;
+        }
+        .site-header .logo span { color: var(--red); }
+
+        /* ── CONTAINER ── */
+        .page-wrap {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 16px 60px;
+        }
+
+        /* ── HEADLINE HERO ── */
+        .hero {
+            background: var(--white);
+            margin-top: 22px;
+            border-radius: 10px;
+            padding: 32px 28px 28px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            border-top: 4px solid var(--red);
+        }
+        .hero .tag-aprovado {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--green-light);
+            border: 1px solid #bbf7d0;
+            color: var(--green);
+            font-size: 13px;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 30px;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(22px, 5vw, 30px);
+            font-weight: 900;
+            color: var(--text-dark);
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+        .hero h1 em {
+            color: var(--red);
+            font-style: normal;
+        }
+        .hero .subheadline {
+            font-size: clamp(15px, 3.5vw, 18px);
+            font-weight: 700;
+            color: var(--red);
+            line-height: 1.4;
+        }
+
+        /* ── DIVISOR ── */
+        .divisor {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 22px 0;
+            color: var(--text-muted);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .divisor::before, .divisor::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #ddd;
+        }
+
+        /* ── VSL ── */
+        .vsl-section {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            margin-bottom: 6px;
+        }
+        .vsl-label {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--red);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .vsl-label::before { content: '▶'; font-size: 10px; }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 8px;
+            background: #0d0d0d;
+            overflow: hidden;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 1;
+            border: 0;
+        }
+
+        /* ── OVERLAY BLUR (cobre o vídeo enquanto mutado) ── */
+        .video-blur-overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: opacity 0.5s ease;
+        }
+        .video-blur-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* ── BOTÃO ATIVAR SOM (overlay no vídeo) ── */
+        .btn-unmute-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--red);
+            color: #fff;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+            box-shadow: 0 4px 0 var(--red-dark), 0 6px 24px rgba(239,68,90,0.4);
+            transition: all 0.2s ease;
+            animation: pulse-unmute 2s ease-in-out infinite;
+            white-space: nowrap;
+        }
+        .btn-unmute-overlay:hover {
+            background: var(--red-dark);
+            transform: translate(-50%, -50%) translateY(2px);
+            box-shadow: 0 2px 0 var(--red-dark), 0 4px 16px rgba(239,68,90,0.35);
+        }
+        .btn-unmute-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: translate(-50%, -50%) translateY(10px);
+            transition: all 0.4s ease;
+        }
+        .btn-unmute-overlay .unmute-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+        }
+        .btn-unmute-overlay .unmute-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #fff;
+        }
+        @keyframes pulse-unmute {
+            0%, 100% { box-shadow: 0 4px 0 var(--red-dark), 0 6px 24px rgba(239,68,90,0.4); }
+            50% { box-shadow: 0 4px 0 var(--red-dark), 0 6px 32px rgba(239,68,90,0.6), 0 0 0 8px rgba(239,68,90,0.12); }
+        }
+
+        /* ── MINI TOGGLE SOM (canto do vídeo) ── */
+        .btn-mute-toggle {
+            position: absolute;
+            bottom: 14px;
+            right: 14px;
+            z-index: 5;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.35);
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(6px);
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        .btn-mute-toggle.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .btn-mute-toggle:hover {
+            background: var(--red);
+            border-color: var(--red);
+            transform: scale(1.1);
+        }
+        .btn-mute-toggle svg {
+            width: 18px;
+            height: 18px;
+            fill: #fff;
+        }
+
+        .video-caption {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* ── CAIXA OFERTA ── */
+        .oferta-box {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 28px 24px;
+            box-shadow: 0 2px 16px rgba(239,68,90,0.1);
+            border: 2px solid var(--red-border);
+            margin-bottom: 6px;
+        }
+        .oferta-box .tag-exclusiva {
+            background: var(--red);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 4px 12px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        /* Imagem do Banner */
+        .img-banner-oferta {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            object-fit: cover;
+        }
+
+        .oferta-box .produto-nome {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(17px, 4vw, 22px);
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.3;
+            margin-bottom: 6px;
+        }
+        .oferta-box .produto-sub {
+            font-size: 14px;
+            color: var(--text-mid);
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+
+        /* O que você recebe lista */
+        .entrega-lista {
+            background: var(--green-light);
+            border: 1px solid #bbf7d0;
+            border-radius: 8px;
+            padding: 18px 16px;
+            margin-bottom: 20px;
+        }
+        .entrega-lista .titulo-lista {
+            font-size: 13px;
+            font-weight: 900;
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 10px;
+        }
+        .entrega-item {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            font-size: 14px;
+            color: var(--text-mid);
+            line-height: 1.5;
+            padding: 5px 0;
+        }
+        .entrega-item .check { color: var(--green); font-weight: bold; flex-shrink: 0; }
+
+        /* Preço */
+        .preco-bloco { text-align: center; margin-bottom: 20px; }
+        .preco-de {
+            font-size: 15px;
+            color: var(--text-muted);
+            text-decoration: line-through;
+            margin-bottom: 2px;
+        }
+        .preco-por {
+            font-size: clamp(28px, 7vw, 40px);
+            font-weight: 900;
+            color: var(--text-dark);
+            line-height: 1;
+        }
+        .preco-por sup { font-size: 18px; font-weight: 700; vertical-align: super; }
+        .preco-parcelado {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Botão CTA */
+        .btn-upsell {
+            display: block;
+            width: 100%;
+            background: var(--red);
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            padding: 18px 20px;
+            border-radius: 8px;
+            font-size: clamp(15px, 4vw, 19px);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 0 var(--red-dark), 0 8px 20px rgba(239,68,90,0.35);
+            transition: all 0.15s ease;
+            line-height: 1.3;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-upsell::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            animation: shimmer 2.5s infinite;
+        }
+        @keyframes shimmer {
+            0% { left: -100%; }
+            60%, 100% { left: 100%; }
+        }
+        .btn-upsell:hover {
+            background: var(--red-dark);
+            transform: translateY(2px);
+            box-shadow: 0 4px 0 var(--red-dark), 0 6px 16px rgba(239,68,90,0.3);
+        }
+        .btn-upsell .btn-icon { font-size: 1.2em; }
+
+        .seguranca-texto {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 12px;
+            line-height: 1.5;
+            text-align: left;
+        }
+        .seguranca-texto .lock { color: var(--green); font-size: 14px; flex-shrink: 0; }
+
+        /* Botão recusa */
+        .recusa-wrap { text-align: center; margin-top: 20px; }
+        .btn-recusa {
+            color: var(--text-muted);
+            font-size: 13px;
+            text-decoration: underline;
+            background: none;
+            border: none;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+        .btn-recusa:hover { color: var(--text-mid); }
+        
+        /* ── COMO FUNCIONA ── */
+        .como-funciona {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 28px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            margin-bottom: 6px;
+        }
+        .como-funciona h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(16px, 4vw, 20px);
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            line-height: 1.3;
+            text-align: center;
+        }
+        .passo-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 16px 0;
+            border-bottom: 1px solid #f0ece8;
+        }
+        .passo-item:last-child { border-bottom: none; }
+        .passo-numero {
+            width: 42px;
+            height: 42px;
+            background: var(--red);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+        .passo-texto strong {
+            display: block;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 3px;
+        }
+        .passo-texto p {
+            font-size: 14px;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+
+        /* ── GARANTIA ── */
+        .garantia-section {
+            background: var(--gold-light);
+            border: 1.5px solid #e8d4a0;
+            border-radius: 10px;
+            padding: 22px 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 6px;
+        }
+        .garantia-icon { font-size: 36px; flex-shrink: 0; }
+        .garantia-texto h4 {
+            font-size: 15px;
+            font-weight: 900;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 6px;
+        }
+        .garantia-texto p {
+            font-size: 14px;
+            color: var(--text-mid);
+            line-height: 1.6;
+        }
+
+        /* ── CTA FINAL ── */
+        .cta-final {
+            background: var(--red-light);
+            border: 2px dashed var(--red-border);
+            border-radius: 10px;
+            padding: 24px;
+            text-align: center;
+            margin-bottom: 6px;
+        }
+        .cta-final p {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        /* ── RODAPÉ ── */
+        footer {
+            text-align: center;
+            padding: 24px 16px 10px;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid #e0dbd5;
+            line-height: 1.8;
+        }
+        footer .selos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+        footer .selo {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            color: var(--text-mid);
+            font-weight: 700;
+        }
+
+        @media (max-width: 480px) {
+            .hero { padding: 24px 18px 20px; }
+            .oferta-box { padding: 22px 18px; }
+            .garantia-section { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA ALERTA -->
+    <div class="alerta-topo">
+        ⚠️ <span>ATENÇÃO:</span> Essa oferta só aparece uma vez. Leia antes de fechar.
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="logo">Kim Dojun <span>•</span> Pele de Porcelana</div>
+    </header>
+
+    <div class="page-wrap">
+
+        <!-- HERO -->
+        <div class="hero">
+            <div class="tag-aprovado">✓ Pedido Aprovado com Sucesso</div>
+            <h1>Seu <em>Pele de Porcelana</em> já está a caminho do seu e-mail...</h1>
+            <div class="divisor">mas antes de ir</div>
+            <p class="subheadline">E se ao invés de seguir um guia genérico, você tivesse um <em>protocolo criado exclusivamente pra sua pele, suas alergias, sua rotina e seus ingredientes?</em></p>
+        </div>
+
+        <!-- VSL -->
+        <div style="margin-top: 14px;">
+            <div class="vsl-section">
+                <div class="vsl-label">Kim Dojun tem um recado pra você</div>
+                <div class="video-wrapper" id="videoContainer">
+                    <iframe id="vslVideo" src="https://player.vimeo.com/video/1195549355?autoplay=1&muted=1&loop=1&controls=0&title=0&byline=0&portrait=0&background=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+                    <!-- Overlay de blur (cobre o vídeo enquanto mutado) -->
+                    <div class="video-blur-overlay" id="videoOverlay"></div>
+
+                    <!-- Botão grande de ativar som -->
+                    <button class="btn-unmute-overlay" id="btnUnmute" onclick="ativarSom()">
+                        <span class="unmute-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                            </svg>
+                        </span>
+                        Toque para ativar o áudio
+                    </button>
+
+                    <!-- Mini toggle de som (aparece após ativar) -->
+                    <button class="btn-mute-toggle" id="btnMuteToggle" onclick="toggleSom()">
+                        <svg id="iconSomOn" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                        </svg>
+                        <svg id="iconSomOff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                            <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="video-caption">Assista 2 minutos — vai mudar como você usa o guia 👆</p>
+                
+                <!-- NOVO CTA ABAIXO DO VÍDEO -->
+                <div style="margin-top: 20px;">
+                    <a href="https://pay.cakto.com.br/35p3ry7_901123" class="btn-upsell">
+                        <span class="btn-icon">🟢</span> Sim! Quero Adicionar ao Meu Pedido
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <script>
+            const iframe = document.getElementById('vslVideo');
+            const player = new Vimeo.Player(iframe);
+            const btnUnmute = document.getElementById('btnUnmute');
+            const btnMuteToggle = document.getElementById('btnMuteToggle');
+            const videoOverlay = document.getElementById('videoOverlay');
+            const iconOn = document.getElementById('iconSomOn');
+            const iconOff = document.getElementById('iconSomOff');
+
+            function ativarSom() {
+                // Reinicia o vídeo do início
+                player.setCurrentTime(0);
+                player.setVolume(1);
+                
+                // Remove o overlay de blur
+                videoOverlay.classList.add('hidden');
+
+                // Esconde o botão grande, mostra o mini toggle
+                btnUnmute.classList.add('hidden');
+                btnMuteToggle.classList.add('visible');
+                iconOn.style.display = 'block';
+                iconOff.style.display = 'none';
+            }
+
+            function toggleSom() {
+                player.getVolume().then(function(volume) {
+                    if (volume > 0) {
+                        player.setVolume(0);
+                        iconOn.style.display = 'none';
+                        iconOff.style.display = 'block';
+                    } else {
+                        player.setVolume(1);
+                        iconOn.style.display = 'block';
+                        iconOff.style.display = 'none';
+                    }
+                }).catch(function(error) {
+                    console.log('Erro ao obter volume:', error);
+                });
+            }
+
+            // Garante que o vídeo toque automaticamente
+            player.play().catch(function() {
+                console.log('Autoplay bloqueado pelo navegador');
+            });
+        </script>
+
+        <!-- OFERTA (MOVIDA PARA CIMA) -->
+        <div style="margin-top: 14px;">
+            <div class="oferta-box">
+                <div class="tag-exclusiva">⚡ Oferta Exclusiva — Só Pra Quem Acabou de Comprar o Pele de Porcelana</div>
+
+                <!-- IMAGEM DO BANNER NOVO (SUBSTITUA O SRC) -->
+                <img src="https://i.imgur.com/LOIS6aA.jpeg" alt="Kim Dojun apontando para a oferta" class="img-banner-oferta">
+
+                <div class="produto-nome">Adicione seu Diagnóstico Personalizado ao pedido</div>
+                <p class="produto-sub">O Pele de Porcelana tem 47 segredos pra todo mundo. O Diagnóstico escolhe os que são <strong>pra você</strong> — baseado na sua pele, na sua idade, nas suas alergias e nos ingredientes que você já tem em casa.</p>
+
+                <!-- O QUE RECEBE -->
+                <div class="entrega-lista">
+                    <div class="titulo-lista">✦ O que você recebe no PDF personalizado:</div>
+                    <div class="entrega-item"><span class="check">✓</span><span>Diagnóstico do seu tipo de pele + mapa facial personalizado</span></div>
+                    <div class="entrega-item"><span class="check">✓</span><span>Rotina matinal montada pro seu caso (3 a 8 passos, conforme seu tempo)</span></div>
+                    <div class="entrega-item"><span class="check">✓</span><span>Rotina noturna montada pro seu caso</span></div>
+                    <div class="entrega-item"><span class="check">✓</span><span>5-7 receitas escolhidas especificamente pros seus problemas de pele</span></div>
+                    <div class="entrega-item"><span class="check">✓</span><span>Lista de ingredientes a EVITAR (baseado nas suas alergias)</span></div>
+                    <div class="entrega-item"><span class="check">✓</span><span>Produtos recomendados pro seu tipo de pele (com links)</span></div>
+                    <div class="entrega-item"><span class="check">✓</span><span>Plano de 30 dias personalizado — dia por dia</span></div>
+                    <div class="entrega-item"><span class="check">✓</span><span>Seu nome na capa — é literalmente SEU protocolo</span></div>
+                </div>
+
+                <!-- PREÇO -->
+                <div class="preco-bloco">
+                    <div class="preco-de">De R$ 197,00</div>
+                    <div class="preco-por"><sup>R$</sup> 97<sup>,00</sup></div>
+                    <div class="preco-parcelado">Ou 3× de R$ 34,22 no cartão</div>
+                </div>
+
+                <!-- BOTÃO -->
+                <a href="SEU_LINK_DE_CHECKOUT_CONSULTORIA" class="btn-upsell">
+                    <span class="btn-icon">🟢</span> Sim! Quero Meu Diagnóstico Personalizado
+                </a>
+
+                <div class="seguranca-texto">
+                    <span class="lock">🔒</span>
+                    <span>Compra 100% segura. Após o pagamento, você recebe o questionário no e-mail em até 5 minutos. O protocolo personalizado é entregue em até 72h.</span>
+                </div>
+            </div>
+
+            <!-- RECUSA -->
+            <div class="recusa-wrap">
+                <a href="SEU_LINK_PAGINA_OBRIGADO_FINAL" class="btn-recusa">
+                    Não obrigado, prefiro seguir o guia genérico sem personalização.
+                </a>
+            </div>
+        </div>
+
+        <!-- COMO FUNCIONA -->
+        <div style="margin-top: 14px;">
+            <div class="como-funciona">
+                <h3>Como funciona o Diagnóstico Personalizado</h3>
+
+                <div class="passo-item">
+                    <div class="passo-numero">1</div>
+                    <div class="passo-texto">
+                        <strong>Você responde o questionário (5 minutos)</strong>
+                        <p>Após a compra, recebe no e-mail um formulário rápido sobre sua pele, alergias, saúde, rotina, ingredientes que tem em casa e objetivos. Responde do celular, do sofá, na hora que quiser.</p>
+                    </div>
+                </div>
+
+                <div class="passo-item">
+                    <div class="passo-numero">2</div>
+                    <div class="passo-texto">
+                        <strong>Kim Dojun analisa suas respostas</strong>
+                        <p>Cada resposta é analisada pra entender exatamente o que sua pele precisa — tipo de pele, problemas específicos, o que evitar por causa de alergias, e quais receitas do universo coreano funcionam melhor pra você.</p>
+                    </div>
+                </div>
+
+                <div class="passo-item">
+                    <div class="passo-numero">3</div>
+                    <div class="passo-texto">
+                        <strong>Em 72h você recebe seu protocolo exclusivo</strong>
+                        <p>Um PDF personalizado com seu nome, seu diagnóstico, sua rotina matinal e noturna montada, receitas escolhidas pro seu caso, ingredientes a evitar, produtos recomendados e um plano de 30 dias feito SÓ pra você. Chega no seu e-mail. Sem sair de casa.</p>
+                    </div>
+                </div>
+                
+                <!-- NOVO CTA ABAIXO DO COMO FUNCIONA -->
+                <div style="margin-top: 24px;">
+                    <a href="https://pay.cakto.com.br/35p3ry7_901123" class="btn-upsell">
+                        <span class="btn-icon">🟢</span> Quero Meu Protocolo Exclusivo Agora
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- GARANTIA -->
+        <div style="margin-top: 14px;">
+            <div class="garantia-section">
+                <div class="garantia-icon">🛡️</div>
+                <div class="garantia-texto">
+                    <h4>Garantia de 7 Dias — Satisfação ou Dinheiro de Volta</h4>
+                    <p>Se você receber o seu Diagnóstico Personalizado e sentir que não valeu cada centavo, basta enviar um e-mail e devolvemos 100% do valor. Sem perguntas. Sem burocracia. O Pele de Porcelana continua sendo seu de qualquer forma.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA FINAL -->
+        <div style="margin-top: 14px;">
+            <div class="cta-final">
+                <p>Essa oferta só aparece agora, nesta página.<br>É a única vez que o Diagnóstico Personalizado está disponível por <strong>R$ 97</strong> ao invés de R$ 197.</p>
+                <a href="https://pay.cakto.com.br/35p3ry7_901123" class="btn-upsell">
+                    <span class="btn-icon">🟢</span> Quero Meu Protocolo Exclusivo (+R$ 97)
+                </a>
+                <div style="margin-top: 12px;">
+                    <a href="SEU_LINK_PAGINA_OBRIGADO_FINAL" class="btn-recusa">
+                        Não, prefiro descobrir sozinha o que funciona pra mim.
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="selos">
+            <span class="selo">🔒 Compra Segura</span>
+            <span class="selo">✅ Entrega em 72h</span>
+            <span class="selo">🛡️ Garantia de 7 Dias</span>
+        </div>
+        <p>© Kim Dojun — Pele de Porcelana. Todos os direitos reservados.</p>
+        <p style="margin-top: 6px;">Kim Dojun é um projeto digital educativo dedicado a compartilhar conhecimento tradicional coreano de beleza natural. O conteúdo é educativo e não substitui orientação dermatológica.</p>
+    </footer>
+
+</body>
+</html>
